@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"o_solid","path":"objects/o_solid/o_solid.yy",},"order":1,},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},"order":0,},
+    {"id":{"name":"Lava","path":"sprites/Lava/Lava.yy",},"order":2,},
     {"id":{"name":"s_solid","path":"sprites/s_solid/s_solid.yy",},"order":1,},
     {"id":{"name":"check_jump","path":"scripts/check_jump/check_jump.yy",},"order":2,},
     {"id":{"name":"collision","path":"scripts/collision/collision.yy",},"order":1,},
@@ -14,6 +15,7 @@
     {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
+    {"name":"macOS","path":"options/mac/options_mac.yy",},
   ],
   "isDnDProject": true,
   "isEcma": false,
