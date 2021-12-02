@@ -1,36 +1,17 @@
-/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
-/// @DnDVersion : 1
-/// @DnDHash : 253681A9
-/// @DnDArgument : "key" "vk_right"
-var l253681A9_0;
-l253681A9_0 = keyboard_check(vk_right);
-if (l253681A9_0)
-{
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 5DD2F7D7
-	/// @DnDParent : 253681A9
-	/// @DnDArgument : "expr" "walk_spd"
-	/// @DnDArgument : "var" "hsp"
-	hsp = walk_spd;
-}
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 6B930192
+/// @DnDArgument : "script" "get_input"
+/// @DnDSaveInfo : "script" "get_input"
+script_execute(get_input);
 
-/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
+/// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
-/// @DnDHash : 57DF615F
-/// @DnDArgument : "key" "vk_left"
-var l57DF615F_0;
-l57DF615F_0 = keyboard_check(vk_left);
-if (l57DF615F_0)
-{
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 168219BB
-	/// @DnDParent : 57DF615F
-	/// @DnDArgument : "expr" "-walk_spd"
-	/// @DnDArgument : "var" "hsp"
-	hsp = -walk_spd;
-}
+/// @DnDHash : 61EB97AA
+/// @DnDArgument : "expr" "global.grav"
+/// @DnDArgument : "expr_relative" "1"
+/// @DnDArgument : "var" "vsp"
+vsp += global.grav;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -39,13 +20,19 @@ if (l57DF615F_0)
 /// @DnDArgument : "var" "hsp"
 hsp = hsp*drag;
 
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 23841CEC
-/// @DnDArgument : "expr" "hsp"
-/// @DnDArgument : "expr_relative" "1"
-/// @DnDArgument : "var" "x"
-x += hsp;
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 68D411EA
+/// @DnDArgument : "script" "check_jump"
+/// @DnDSaveInfo : "script" "check_jump"
+script_execute(check_jump);
+
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 3AD8B57A
+/// @DnDArgument : "script" "collision"
+/// @DnDSaveInfo : "script" "collision"
+script_execute(collision);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
